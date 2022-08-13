@@ -3,7 +3,7 @@
 #include <verilated_vcd_c.h>
 
 #include "Vsoc.h"
-#include "utilities.h"
+#include "verilog/utilities.h"
 const int MAX_CYCLES = 20;
 
 int main(int argc, char** argv, char** env)

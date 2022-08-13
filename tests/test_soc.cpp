@@ -2,11 +2,11 @@
 #include <verilated_vcd_c.h>
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include "verilog/doctest.h"
 
 #include "Vsoc.h"
-#include "utilities.h"
-#include "testbench.h"
+#include "verilog/utilities.h"
+#include "verilog/testbench.h"
 
 TEST_CASE("soc")
 {

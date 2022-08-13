@@ -1,10 +1,7 @@
-testbench = library('libtestbench',
-    ['testbench.h', 'doctest.h']
-)
 
 tests = executable('tests',
     ['test_soc.cpp'] + verilator_sources + rtl_headers,
-    link_with: rtl_libraries + [testbench],
+    link_with: rtl_libraries + [verilog],
     include_directories: includes,
     cpp_args: '-Wno-non-virtual-dtor'
 )
