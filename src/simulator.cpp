@@ -11,9 +11,9 @@ int main(int argc, char** argv, char** env)
     Vsoc soc;
 
     for (vluint64_t sim_time = 0; sim_time < MAX_CYCLES; sim_time++) {
-        soc.clk ^= 1;
+        soc.clock ^= 1;
         soc.eval();
-        std::cout << soc.clk << std::endl;
+        std::cout << soc.clock << std::endl;
     }
 
     soc.final();

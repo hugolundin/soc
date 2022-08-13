@@ -1,11 +1,11 @@
 `timescale 1us/1us
 
 module soc (
-  input logic clk, d,
+  input logic clock, d,
   output logic q
 );
 
-always @(posedge clk) begin
+always @(posedge clock) begin
   q <= d;
 end
 

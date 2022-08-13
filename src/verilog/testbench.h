@@ -6,8 +6,6 @@
 
 #include "doctest.h"
 
-const char * ENABLE_TRACING_ENV_VARIABLE = "WAVES";
-
 template <class DUT>
 class Testbench {
 public:
@@ -31,11 +29,11 @@ public:
         
         while (true) {
             m_time += 1;
-            m_dut.clk ^= 1;
+            m_dut.clock ^= 1;
             m_dut.eval();
             dump_if_enabled();
 
-            if (m_dut.clk == 1) {
+            if (m_dut.clock == 1) {
                 break;
             }
         }
@@ -89,7 +87,7 @@ private:
 
     bool trace()
     {
-        if (getenv(ENABLE_TRACING_ENV_VARIABLE)) {
+        if (getenv("WAVES")) {
             return true;
         }
 

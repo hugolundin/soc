@@ -1,5 +1,6 @@
 modules = {
-    'soc': ['soc.v']
+    'soc': ['soc.v'],
+    'program_memory': ['program_memory/program_memory.v']
 }
 
 rtl_headers = []
@@ -23,7 +24,7 @@ foreach name, sources : modules
             '--Mdir', 'rtl',
             '--trace',
             '--timescale-override', '/1fs',
-            '--clk', 'clk'
+            '--clk', 'clock'
         ],
         build_by_default: true
     )
