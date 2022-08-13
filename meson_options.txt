@@ -1,0 +1,1 @@
+option('verilator', type : 'string', value : '/usr/local/opt/verilator/share/verilator/include', description : 'Verilator header path')
