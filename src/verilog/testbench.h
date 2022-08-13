@@ -6,6 +6,8 @@
 
 #include "doctest.h"
 
+const char * ENABLE_TRACING_ENV_VARIABLE = "WAVES";
+
 template <class DUT>
 class Testbench {
 public:
@@ -87,7 +89,7 @@ private:
 
     bool trace()
     {
-        if (getenv("TRACE")) {
+        if (getenv(ENABLE_TRACING_ENV_VARIABLE)) {
             return true;
         }
 
